@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+    <include layout="@layout/top_navigation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="Add"
+        android:src="@drawable/ic_create_fab"
+        android:tint="@color/white"
+        app:backgroundTint="#A7DBFF"
+        app:backgroundTintMode="src_in"
+        app:maxImageSize="35dp"
+        app:shapeAppearanceOverlay="@style/CustomShapeAppearance_FloatingActionButton"
+        app:tint="@null"
+        tools:ignore="MissingConstraints" />
+
+    <FrameLayout
+        android:id="@+id/contentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        app:layout_constraintTop_toBottomOf="@id/top_navigation_bar"
+        app:layout_constraintBottom_toTopOf="@id/categoryScrollBar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/categoryScrollBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_anchor="@+id/calendar_sheet"
+        app:layout_anchorGravity="top|start|end">
+
+        <!-- Horizontal Category Bar within a CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/white">
+
+            <android.widget.HorizontalScrollView
+                android:id="@+id/horizontal_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="50dp"
+                android:scrollbars="none"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/category_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Add "Current" option -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:clickable="true"
+                        android:background="@drawable/bg_category_current_inactive"
+                        android:id="@+id/currentOption" />
+
+                    <!-- Add "All" option -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:clickable="true"
+                        android:background="@drawable/bg_category_all_inactive"
+                        android:id="@+id/allOption" />
+                    <!-- Add your category items here -->
+                    <!-- You can dynamically add category items based on user input -->
+
+
+                </LinearLayout>
+            </android.widget.HorizontalScrollView>
+
+            <!-- Three-dot menu button at the right with increased touch target size -->
+            <!-- Add padding to the right for touch target -->
+            <ImageButton
+                android:id="@+id/manage_categories_more_vert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_more_vert"
+                android:background="@drawable/ripple_add_category"
+                android:contentDescription="Open Menu"
+                android:layout_gravity="end|center_vertical"
+                android:paddingStart="13dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/calendar_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calendar_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

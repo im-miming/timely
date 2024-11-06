@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#292929</color>
+    <color name="blue">#004AAD</color>
+    <color name="calendar_blue">#A7DBFF</color>
+    <color name="medzbrown">#ddd7ce</color>
+    <color name="superlightblue">#ccdbef</color>
+    <color name="colorBlue">#004aad</color>
+    <color name="colorGreen">#00bf63</color>
+    <color name="colorOrange">#ff914d</color>
+    <color name="colorPink">#ff66c4</color>
+    <color name="colorRed">#ff3131</color>
+    <color name="colorViolet">#8c52ff</color>
+    <color name="colorYellow">#ffde59</color>
+    <color name="colorSelectedBorder">#DDD7CE</color> <!-- Selected border color -->
+    <color name="peach">#FFBD59</color>
+    <color name="lightPeach">#FFD79B</color>
+    <color name="cardblue">#ECF9F9</color>
+
+    <color name="mylightbluecolor">#91C8E4</color>
+    <color name="mybluevioletcolor">#749BC2</color>
+    <color name="mybluecolor">#4682A9</color>
+    <color name="fordainputfieldcolor">#E6F6FF</color>
+    <color name="fordabgcolor">#D1EDFF</color>
+    <color name="fordabuttoncolor">#A7DBFF</color>
+    <color name="grey_for_text">#686969</color>
+</resources>

@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.Timely" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item> <!-- This is the status bar color -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item> <!-- This makes the status bar icons dark -->
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <style name="Theme.Timely" parent="Base.Theme.Timely" />
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">#004AAD</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog_add_category</item>
+        <!-- Add more custom attributes as needed -->
+    </style>
+    <style name="CustomShapeAppearance_FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- To make it circular -->
+    </style>
+
+    <style name="poppins_regular">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_bold">
+        <item name="android:fontFamily">@font/p_bold</item>
+    </style>
+
+
+    <style name="poppins_italic">
+        <item name="android:fontFamily">@font/poppins_italic</item>
+    </style>
+
+    <style name="poppins_semibold">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="PoppinsRegular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="PoppinsBold" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/p_bold</item>
+    </style>
+</resources>

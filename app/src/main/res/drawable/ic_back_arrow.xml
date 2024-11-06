@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Normal state -->
+    <item android:drawable="@drawable/ic_back_arrow_normal" />
+
+    <!-- Pressed state (change the color) -->
+    <item android:drawable="@drawable/ic_back_arrow_pressed" android:state_pressed="true" />
+</selector>

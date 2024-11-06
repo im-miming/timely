@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageCategoriesActivity"
+    android:background="@color/white">
+
+    <!-- Parent LinearLayout for arrow icon and "Manage Categories" text -->
+    <LinearLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start"
+        android:gravity="start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp">
+
+        <!-- Left Arrow Icon -->
+        <ImageView
+            android:id="@+id/leftArrowIcon"
+            android:layout_width="40dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <!-- Text "Manage Categories" -->
+        <TextView
+            android:id="@+id/manageCategoriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:text="Manage Categories"
+            android:textColor="#004aad"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- "Displayed Categories" Text with background spanning the screen width -->
+    <TextView
+        android:id="@+id/displayedCategoriesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCDBEF"
+        android:text="Displayed Categories"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleContainer"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <!-- RecyclerView to display categories -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addCategoryLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- LinearLayout with plus icon and text "Add category" aligned to the left -->
+    <LinearLayout
+        android:id="@+id/addCategoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/displayedCategoriesText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_add_category"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:clickable="true"
+        android:onClick="yourOnClickMethod">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_add_category" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="Create New"
+            android:textColor="#004aad"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Add other UI components and constraints as needed -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

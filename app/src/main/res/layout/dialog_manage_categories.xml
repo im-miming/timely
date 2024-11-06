@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end|bottom">
+
+    <TextView
+        android:id="@+id/manage_categories_more_vert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage categories"
+        android:textColor="#4d4d4d"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginRight="20dp"/>
+</FrameLayout>

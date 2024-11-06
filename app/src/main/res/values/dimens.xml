@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="date_margin">10dp</dimen>
+    <!-- Define category_margin with a value in dp (adjust the value as needed) -->
+    <dimen name="category_margin">10dp</dimen>
+    <dimen name="category_top_bottom_padding">4dp</dimen> <!-- Adjust as needed -->
+    <dimen name="category_left_right_padding">8dp</dimen> <!-- Keep the same -->
+</resources>

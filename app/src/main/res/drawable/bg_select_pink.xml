@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Border when pressed -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <stroke android:color="@color/colorSelectedBorder" android:width="2dp" />
+            <solid android:color="@color/colorPink" />
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorPink" />
+        </shape>
+    </item>
+</layer-list>

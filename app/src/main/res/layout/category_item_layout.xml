@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:paddingStart="22dp">
+
+    <!-- Circular color indicator -->
+    <View
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:id="@+id/colorIndicatorView"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_category_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryNameTextView"
+        android:layout_weight="1"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/category_option_more_vert"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_more_vert"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>
